@@ -62,6 +62,10 @@
                     if(obj.isVeterinario == 1){
                         tipo += '<span data-toggle="tooltip" data-placement="top" data-original-title="{!! trans('ComponentePessoa::ClientController.tipos.veterinario') !!}" class="label label-info">{!! trans('ComponentePessoa::ClientController.tipos.sgVeterinario') !!}</span> ';
                     }
+
+                    if(obj.isRebanhoColaborador == 1){
+                        tipo += '<span data-toggle="tooltip" data-placement="top" data-original-title="{!! trans('ComponentePessoa::ClientController.tipos.rebanho') !!}" class="label label-info">{!! trans('ComponentePessoa::ClientController.tipos.sgRebColaborador') !!}</span> ';
+                    }
                     return tipo;
                 }}
             ];

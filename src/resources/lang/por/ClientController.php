@@ -18,5 +18,8 @@ return [
 
         'sgTecnico'             => 'TEC',
         'tecnico'               => 'TÉCNICO',
+
+        'sgRebColaborador'      => 'RC',
+        'rebanho'               => 'REBANHO COLABORADOR',
     ]
 ];
