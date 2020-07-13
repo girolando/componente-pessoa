@@ -74,6 +74,7 @@ class UpCommand extends Command
                 (case when len(cgccfo) > 15 then 1 else 0 end) as isEmpresa,
                 (case when rc.codigoPessoa is not null then 1 else 0 end) as isRebanhoColaborador,
                 (case when rc.codigoPessoa is not null or a.statusAssociado = 1 then 1 else 0 end) as isCriadorAtivoOrRebColaborador,
+                (case when cont.statusControlador = 1 then 1 else 0 end) as isControlador,
                 f.COMPLEMENTO
             FROM 
                 pessoa p
@@ -81,6 +82,7 @@ class UpCommand extends Command
             left join Funcionario fun on fun.codigoPessoa = p.codigoPessoa and fun.bitTecnicoFuncionario = 0 and fun.matriculaFuncionario is not null and fun.tecnicoFuncionario is null
             left join Funcionario tec on tec.codigoPessoa = p.codigoPessoa and tec.bitTecnicoFuncionario = 1 and tec.codvenFuncionario is not null --cod. vendedor (apenas técnicos possuem)
             left join Veterinario vet on vet.codigoPessoa = p.codigoPessoa
+            left join scl.Controlador cont on cont.codigoPessoa = p.codigoPessoa
             left join corpore.dbo.fcfo f on cast(f.codcfo as bigint) = p.codCfo
             left join (
                 select * from tp.rebanhocolaborador rc

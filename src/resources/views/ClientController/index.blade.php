@@ -66,6 +66,10 @@
                     if(obj.isRebanhoColaborador == 1){
                         tipo += '<span data-toggle="tooltip" data-placement="top" data-original-title="{!! trans('ComponentePessoa::ClientController.tipos.rebanho') !!}" class="label label-info">{!! trans('ComponentePessoa::ClientController.tipos.sgRebColaborador') !!}</span> ';
                     }
+
+                    if(obj.isControlador == 1){
+                        tipo += '<span data-toggle="tooltip" data-placement="top" data-original-title="{!! trans('ComponentePessoa::ClientController.tipos.controlador') !!}" class="label label-info">{!! trans('ComponentePessoa::ClientController.tipos.sgControlador') !!}</span> ';
+                    }
                     return tipo;
                 }}
             ];

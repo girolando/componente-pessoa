@@ -62,7 +62,8 @@ class DatabaseEntity extends Model
         'isVeterinario',
         'isEmpresa',
         'isRebanhoColaborador',
-        'isCriadorAtivoOrRebColaborador'
+        'isCriadorAtivoOrRebColaborador',
+        'isControlador'
     ];
 
 }
