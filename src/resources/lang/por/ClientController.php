@@ -21,5 +21,8 @@ return [
 
         'sgRebColaborador'      => 'RC',
         'rebanho'               => 'REBANHO COLABORADOR',
+
+        'sgLaboratorio'         => 'LAB',
+        'laboratorio'           => 'LABORATÓRIO',
     ]
 ];

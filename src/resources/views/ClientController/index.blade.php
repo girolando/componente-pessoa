@@ -70,6 +70,10 @@
                     if(obj.isControlador == 1){
                         tipo += '<span data-toggle="tooltip" data-placement="top" data-original-title="{!! trans('ComponentePessoa::ClientController.tipos.controlador') !!}" class="label label-info">{!! trans('ComponentePessoa::ClientController.tipos.sgControlador') !!}</span> ';
                     }
+
+                    if(obj.isLaboratorio == 1){
+                        tipo += '<span data-toggle="tooltip" data-placement="top" data-original-title="{!! trans('ComponentePessoa::ClientController.tipos.laboratorio') !!}" class="label label-info">{!! trans('ComponentePessoa::ClientController.tipos.sgLaboratorio') !!}</span> ';
+                    }
                     return tipo;
                 }}
             ];
