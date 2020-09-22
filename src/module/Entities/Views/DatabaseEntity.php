@@ -63,7 +63,8 @@ class DatabaseEntity extends Model
         'isEmpresa',
         'isRebanhoColaborador',
         'isCriadorAtivoOrRebColaborador',
-        'isControlador'
+        'isControlador',
+        'isLaboratorio'
     ];
 
 }

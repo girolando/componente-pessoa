@@ -75,6 +75,7 @@ class UpCommand extends Command
                 (case when rc.codigoPessoa is not null then 1 else 0 end) as isRebanhoColaborador,
                 (case when rc.codigoPessoa is not null or a.statusAssociado = 1 then 1 else 0 end) as isCriadorAtivoOrRebColaborador,
                 (case when cont.statusControlador = 1 then 1 else 0 end) as isControlador,
+                coalesce(Lab.statusLaboratorio, 0) as isLaboratorio,
                 f.COMPLEMENTO
             FROM 
                 pessoa p
